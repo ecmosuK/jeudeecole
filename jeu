@@ -1,0 +1,467 @@
+import random
+point = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+lives = 5
+heart_symbol = u'\u2764'
+points = 0
+nom = input("Qu'est ce que c'est ton nom? ")
+print("Comment jouer: L'ordi va te demander un question. Tu peux reponder par 1, 2, ou 3")
+start = input("Est ce que tu veux commencer " + nom+"?")
+if start == "non" or start == "Non":
+    print("Au revoir!")
+elif start == "Oui" or start == 'oui':
+    pnt = random.choice(point)
+    difficulty = input("Choisi la difficulté: 1. Facile 2. Normal 3. Difficile")
+    if difficulty == "1":
+            lives = 10
+            print("Tu as 10 coeur")
+    elif difficulty =="2":
+        lives = 5
+        print("Tu as 5 coeur")
+    elif difficulty =="3": 
+        lives = 3
+        print("Tu as 3 coeur")
+    while lives > 0:
+        q1 = input("Est-ce que les Lysosomes sont partie du 1. Cellules animales 2. Cellules végétal 3. Les deux")
+        if q1 == "1":
+            print("Tu as raison!")
+            print(heart_symbol*lives) 
+            points += pnt
+        elif q1 =="2":
+            print("Non, ce n'était pas 2")
+            lives -= 1
+            points -= pnt
+            if lives > 0:
+                print(heart_symbol*lives)
+            elif lives == 0:
+                print("Tu es mort!")
+                points2 = str(points)
+                print("Tu as eu "+ points2+"points")
+                break
+        else:
+            print("Non ce n'était pas 3")
+            lives -= 1
+            points -= pnt
+            if lives > 0:
+                print(heart_symbol*lives)
+            elif lives == 0:
+                print("Tu es mort!")
+                points2 = str(points)
+                print("Tu as eu "+ points2+"points")
+                break
+        pnt = random.choice(point)
+        q1 = input("Est-ce que le reticulum endoplasmique sont partie du 1. Cellules animales 2. Cellules végétal 3. Les deux")
+        if q1 == "1":
+            print("Non, ce n'était pas 1")
+            lives -= 1
+            points -= pnt
+            if lives > 0:
+                print(heart_symbol*lives)
+            elif lives == 0:
+                print("Tu es mort!")
+                points2 = str(points)
+                print("Tu as eu "+ points2+"points")
+                break
+        elif q1 =="2":
+            print("Non, ce n'était pas 2")
+            lives -= 1
+            points -= pnt
+            if lives > 0:
+                print(heart_symbol*lives)
+            elif lives == 0:
+                print("Tu es mort!")
+                points2 = str(points)
+                print("Tu as eu "+ points2+"points")
+                break
+        else:
+            print("Oui, c'était 3!")
+            print(heart_symbol * lives)
+            points += pnt
+        pnt = random.choice(point)
+        q1 = input("Est-ce que les vacuoles sont partie du 1. Cellules animales 2. Cellules végétal 3. Les deux")
+        if q1 == "1":
+            print("Non, ce n'était pas 1")
+            lives -= 1
+            points -= pnt
+            if lives > 0:
+                print(heart_symbol*lives)
+            elif lives == 0:
+                print("Tu es mort!")
+                points2 = str(points)
+                print("Tu as eu "+ points2+"points")
+                break
+        elif q1 =="2":
+            print("Non, ce n'était pas 2")
+            lives -= 1
+            points -= pnt
+            if lives > 0:
+                print(heart_symbol*lives)
+            elif lives == 0:
+                print("Tu es mort!")
+                points2 = str(points)
+                print("Tu as eu "+ points2+"points")
+                break
+        else:
+            print("Oui, c'était 3!")
+            print(heart_symbol * lives)
+            points += pnt
+        pnt = random.choice(point)
+        q1 = input("Est-ce que le membrane cellulaire sont partie du 1. Cellules animales 2. Cellules végétal 3. Les deux")
+        if q1 == "1":
+            print("Non, ce n'était pas 1")
+            lives -= 1
+            points -= pnt
+            if lives > 0:
+                print(heart_symbol*lives)
+            elif lives == 0:
+                print("Tu es mort!")
+                points2 = str(points)
+                print("Tu as eu "+ points2+"points")
+                break
+        elif q1 =="2":
+            print("Non, ce n'était pas 2")
+            lives -= 1
+            points -= pnt
+            if lives > 0:
+                print(heart_symbol*lives)
+            elif lives == 0:
+                print("Tu es mort!")
+                points2 = str(points)
+                print("Tu as eu "+ points2+"points")
+                break
+        else:
+            print("Oui, c'était 3!")
+            print(heart_symbol * lives)
+            points += pnt
+        print("Maintenant, tu dois trouver quel partie va avec le definition")
+        pnt = random.choice(point)
+        q1 = input("Il est parfois appelé 'des usines a proteines' 1. Appareil de Golgi 2. Ribosomes 3. Lysosomes ")
+        if q1 == '1':
+            print("Non, ce n'était pas 1")
+            lives -= 1
+            points -= pnt
+            if lives > 0:
+                    print(heart_symbol*lives)
+            elif lives == 0:
+                print("Tu es mort!")
+                points2 = str(points)
+                print("Tu as eu "+ points2+"points")
+                break
+        elif q1 == '2':
+            print("Oui, c'était 2!")
+            points += pnt
+            if lives > 0:
+                print(heart_symbol*lives)
+            elif lives == 0:
+                print("Tu es mort!")
+                points2 = str(points)
+                print("Tu as eu "+ points2+"points")
+                break
+        elif q1 == '3':
+            print("Non, c'était pas 3")
+            lives -= 1
+            points -= pnt
+            if lives > 0:
+                print(heart_symbol*lives)
+            elif lives == 0:
+                print("Tu es mort!")
+                points2 = str(points)
+                print("Tu as eu "+ points2+"points")
+                break
+        pnt = random.choice(point)
+        q1 = input("Trie les protéines et les graisses importantes dans la cellule avant qu'elles soient livrées à leur prochaine destination 1. nucléole 2. L'appareil de Golgi 3. La paroi cellulaire")
+        if q1 == '1':
+            print("Non, ce n'était pas 1")
+            lives -= 1
+            points -= pnt
+            if lives > 0:
+                print(heart_symbol*lives)
+            elif lives == 0:
+                print("Tu es mort!")
+                points2 = str(points)
+                print("Tu as eu "+ points2+"points")
+                break
+        elif q1 == '2':
+            print("Oui, c'était 2!")
+            points += pnt
+        elif q1 =='3':
+            print("Non, ce n'était pas 3")
+            points -= pnt
+            if lives > 0:
+                print(heart_symbol*lives)
+            elif lives == 0:
+                print("Tu es mort!")
+                points2 = str(points)
+                print("Tu as eu "+ points2+"points")
+                break
+        pnt = random.choice(point)
+        q1 = input("Produisent l'énergie nécessaire à la survie et au fonctionnement de la cellule. Cette énergie est convertie de glucose en ATP qui est une énergie usable 1. Mitochondires 2. Noyau 3. réticulum endoplasmique")
+        if q1 == '1':
+            print("Oui, c'était 1!")
+            points += pnt
+            if lives > 0:
+                    print(heart_symbol*lives)
+            elif lives == 0:
+                print("Tu es mort!")
+                points2 = str(points)
+                print("Tu as eu " + points2 +"points")
+                break
+        elif q1 == '2':
+            print("Non, c'était pas 2")
+            lives -= 1
+            points -= pnt
+            if lives > 0:
+                print(heart_symbol*lives)
+            elif lives == 0:
+                print("Tu es mort!")
+                points2 = str(points)
+                print("Tu as eu "+ points2+"points")
+                break
+        elif q1 == '3':
+            print("Non, c'était pas 3")
+            lives-=1
+            points -= pnt
+            if lives > 0:
+                print(heart_symbol*lives)
+            elif lives == 0:
+                print("Tu es mort!")
+                points2 = str(points)
+                print("Tu as eu "+ points2+"points")
+                break
+        pnt = random.choice(point)
+        q1 = input("Centre de contrôle et stocke l'ADN et les informations génétiques 1. Chloroplastes 2. Lysosomes 3. Noyau")
+        if q1 == '1':
+            print("Non, ce n'était pas 1")
+            lives -= 1
+            points -= pnt
+            if lives > 0:
+                    print(heart_symbol*lives)
+            elif lives == 0:
+                print("Tu es mort!")
+                points2 = str(points)
+                print("Tu as eu " + points2 +"points")
+                break
+        elif q1 == '2':
+            print("Non, c'était pas 2")
+            lives -= 1
+            points -= pnt
+            if lives > 0:
+                print(heart_symbol*lives)
+            elif lives == 0:
+                print("Tu es mort!")
+                points2 = str(points)
+                print("Tu as eu "+ points2+"points")
+                break
+        elif q1 == '3':
+            print("Oui, c'était 3!")
+            points += pnt
+            if lives > 0:
+                print(heart_symbol*lives)
+            elif lives == 0:
+                print("Tu es mort!")
+                points2 = str(points)
+                print("Tu as eu "+ points2+"points")
+                break
+        pnt = random.choice(point)
+        q1 = input("Contiennent les enzymes digestives de la cellule 1. Lysosomes 2. nucléole 3. réticulum endoplasmique ")
+        if q1 == '1':
+            print("Oui, c'était 1!")
+            points += pnt
+            if lives > 0:
+                    print(heart_symbol*lives)
+            elif lives == 0:
+                print("Tu es mort!")
+                points2 = str(points)
+                print("Tu as eu " + points2 +"points")
+                break
+        elif q1 == '2':
+            print("Oui, c'était 2!")
+            lives -= 1
+            points -= pnt
+            if lives > 0:
+                print(heart_symbol*lives)
+            elif lives == 0:
+                print("Tu es mort!")
+                points2 = str(points)
+                print("Tu as eu "+ points2+"points")
+                break
+        elif q1 == '3':
+            print("Non, c'était pas 3")
+            lives-=1
+            points -= pnt
+            if lives > 0:
+                print(heart_symbol*lives)
+            elif lives == 0:
+                print("Tu es mort!")
+                points2 = str(points)
+                print("Tu as eu "+ points2+"points")
+                break
+        pnt = random.choice(point)
+        q1 = input("contenu dans le noyau et responsable pour la fabrication des ribosomes 1. Noyau 2. Chloroplastes 3. Nucléole ")
+        if q1 == '1':
+            print("Oui, c'était 1!")
+            points -= pnt
+            lives -= 1
+            if lives > 0:
+                    print(heart_symbol*lives)
+            elif lives == 0:
+                print("Tu es mort!")
+                points2 = str(points)
+                print("Tu as eu " + points2 +"points")
+                break
+        elif q1 == '2':
+            print("Non, c'était pas 2")
+            lives -= 1
+            points -= pnt
+            if lives > 0:
+                print(heart_symbol*lives)
+            elif lives == 0:
+                print("Tu es mort!")
+                points2 = str(points)
+                print("Tu as eu "+ points2+"points")
+                break
+        elif q1 == '3':
+            print("Oui, c'était 3")
+            points += pnt
+            if lives > 0:
+                print(heart_symbol*lives)
+            elif lives == 0:
+                print("T'es mort!")
+                points2 = str(points)
+                print("Tu as eu "+ points2+"points")
+                break
+        pnt = random.choice(point)
+        q1 = input("Un réseau de bulles et de tubes qui sont rugueux soit lisses 1. Vacuole 2. réticulum endoplasmique 3. chloroplastes ")
+        if q1 == '1':
+            print("Non c'était pas 1")
+            points -= pnt
+            lives -= 1
+            if lives > 0:
+                    print(heart_symbol*lives)
+            elif lives == 0:
+                print("Tu es mort!")
+                points2 = str(points)
+                print("Tu as eu " + points2 +"points")
+                break
+        elif q1 == '2':
+            print("Oui, c'était 2!")
+            points += pnt
+            if lives > 0:
+                print(heart_symbol*lives)
+            elif lives == 0:
+                print("Tu es mort!")
+                points2 = str(points)
+                print("Tu as eu "+ points2+"points")
+                break
+        elif q1 == '3':
+            print("Non, c'était pas 3")
+            lives-=1
+            points -= pnt
+            if lives > 0:
+                print(heart_symbol*lives)
+            elif lives == 0:
+                print("Tu es mort!")
+                points2 = str(points)
+                print("Tu as eu "+ points2+"points")
+                break
+        pnt = random.choice(point)
+        q1 = input("Une grande membrane dans la cellule qui est remplie de fluide 1. vacuole 2. membrane cellulaire 3. cytoplasme ")
+        if q1 == '1':
+            print("Oui, c'était 1!")
+            points += pnt
+            if lives > 0:
+                    print(heart_symbol*lives)
+            elif lives == 0:
+                print("Tu es mort!")
+                points2 = str(points)
+                print("Tu as eu " + points2 +"points")
+                break
+        elif q1 == '2':
+            print("Non ce n'était pas 2")
+            points -= pnt
+            lives -= 1
+            if lives > 0:
+                print(heart_symbol*lives)
+            elif lives == 0:
+                print("Tu es mort!")
+                points2 = str(points)
+                print("Tu as eu "+ points2+"points")
+                break
+        elif q1 == '3':
+            print("Non, c'était pas 3")
+            lives-=1
+            points -= pnt
+            if lives > 0:
+                print(heart_symbol*lives)
+            elif lives == 0:
+                print("Tu es mort!")
+                points2 = str(points)
+                print("Tu as eu "+ points2+"points")
+                break
+        pnt = random.choice(point)
+        q1 = input("Sert de support aux structures internes de la cellule. 1. paroi cellulaire 2. noyau 3. cytoplasme ")
+        if q1 == '1':
+            print("Non c'était pas 1")
+            points -= pnt
+            lives -= 1
+            if lives > 0:
+                    print(heart_symbol*lives)
+            elif lives == 0:
+                print("Tu es mort!")
+                points2 = str(points)
+                print("Tu as eu " + points2 +"points")
+                break
+        elif q1 == '2':
+            print("Non ce n'était pas 2")
+            points -= pnt
+            lives -= 1
+            if lives > 0:
+                print(heart_symbol*lives)
+            elif lives == 0:
+                print("Tu es mort!")
+                points2 = str(points)
+                print("Tu as eu "+ points2+"points")
+                break
+        elif q1 == '3':
+            print("Oui, c'était 3!")
+            points += pnt
+            if lives > 0:
+                print(heart_symbol*lives)
+            elif lives == 0:
+                print("Tu es mort!")
+                points2 = str(points)
+                print("Tu as eu "+ points2+"points")
+                break
+        pnt = random.choice(point)
+        q1 = input("Une couche rigide dont le but premier est de proteger et de soutenir la cellule 1. vacuole 2. paroi cellulaire 3. membrane cellulaire ")
+        if q1 == '1':
+            print("Non, ce n'etait pas 1")
+            points -= pnt
+            lives -= 1
+            if lives > 0:
+                    print(heart_symbol*lives)
+            elif lives == 0:
+                print("Tu es mort!")
+                points2 = str(points)
+                print("Tu as eu " + points2 +"points")
+                break
+        elif q1 == '2':
+            print("Oui, c'etait 2!")
+            points += pnt
+            if lives > 0:
+                print(heart_symbol*lives)
+            elif lives == 0:
+                print("Tu es mort!")
+                points2 = str(points)
+                print("Tu as eu "+ points2+"points")
+                break
+        elif q1 == '3':
+            print("Non, c'était pas 3")
+            lives-=1
+            points -= pnt
+            if lives > 0:
+                print(heart_symbol*lives)
+            elif lives == 0:
+                print("Tu es mort!")
+                points2 = str(points)
+                print("Tu as eu "+ points2+"points")
+                break
